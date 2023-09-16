@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload image website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Upload image</h2>
+        <form action="{{ url_for('upload_file') }}" method="POST" enctype="multipart/form-data" id="upload-form">
+            <input type="file" name="file" id="pic_upload" accept=".jpg, .jpeg, .png" hidden>
+            <input type="submit" name="submit" id="pic_submit" hidden>
+        </form>
+        <div class="upload_img_area">
+            <i class='bx bx-cloud-upload bx-tada-hover icon' ></i>
+            <!-- <p>upload image</p> -->
+        </div>
+        <button class="select_image_button" type="submit">select image</button>
+        <button class="submit_buttom" type="submit">submit</button>
+    </div>
+    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+</body>
+</html>
+
+
+<!-- https://boxicons.com/ high quality web icons-->
